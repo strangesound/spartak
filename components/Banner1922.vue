@@ -7,8 +7,7 @@
             </div>
             <div class="banner1922__arrow"></div>
 
-            <p class="banner1922__main-text">Каждый желающий может провести свою игру на лодке и стать частью истории
-            </p>
+            <p class="banner1922__main-text">Каждый желающий может провести свою игру на&nbsp;лодке и&nbsp;стать частью истории</p>
             <button class="btn">Записаться на матч</button>
 
         </div>
@@ -22,14 +21,14 @@
     background-color: var(--colorRed);
     display: grid;
     grid-template-columns: 4fr 5fr;
-    min-height: 280px;
+    min-height: 20.833vw;
 }
 
 .banner1922__left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 8px;
+    padding: 0.595vw;
 }
 
 .banner1922__top-text-container {
@@ -42,7 +41,7 @@
     font-family: 'Druk';
     font-style: italic;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 5.952vw;
     line-height: 85%;
     letter-spacing: 0.01em;
     text-transform: uppercase;
@@ -54,7 +53,7 @@
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.860vw;
     line-height: 96%;
     letter-spacing: -0.01em;
     text-transform: uppercase;
@@ -67,7 +66,7 @@
         font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.860vw;
     line-height: 96%;
     letter-spacing: -0.01em;
     /* text-transform: uppercase; */

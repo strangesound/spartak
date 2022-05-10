@@ -16,11 +16,17 @@
 
 html * {
      font-family: Helvetica, Arial, sans-serif;
+     box-sizing: border-box;
+
+}
+
+body{
+     background-color: var(--colorDark);
 }
 
 .btn {
      width: 100%;
-     padding: 10px 0;
+     padding: 0.744vw;
      background-color: var(--colorDark);
      color: var(--colorLight);
      text-align: center;
@@ -28,15 +34,16 @@ html * {
      font-family: 'Helvetica Neue';
      font-style: normal;
      font-weight: 400;
-     font-size: 15px;
+     font-size: 1.116vw;
      line-height: 107%;
-     border-radius: 24px;
-     margin-top: 5px;
+     border-radius: 1.786vw;
+     margin-top: 0.372vw;
      cursor: pointer;
      border: 0;
  
  }
  
  .btn:hover {
-     opacity: .8;
+     background-color: var(--colorLight);
+     color: var(--colorDark);
  }

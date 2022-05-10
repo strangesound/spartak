@@ -13,6 +13,7 @@
 
 <style>
 .grid-container {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 3fr) 1fr
 }

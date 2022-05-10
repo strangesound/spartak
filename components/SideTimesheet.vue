@@ -69,34 +69,36 @@
 
 <style>
 .sidetimesheet {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
     background-color: var(--colorOrange);
-    padding: 8px;
-    position: sticky;
-    top: 0;
-
-    /* top: 0%;
-    right: 0%; */
-    /* min-height: 100vh; */
+    padding: 0.595vw;
+    z-index: 999;
+    position: fixed;
+    overflow-x: hidden;
+    height: 100vh;
+    top: 0%;
+    right: 0%;
+    width: 25%;
 }
 
 .sidetimesheet__top-row {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    min-height: 70px;
+    min-height: 5.208vw;
     /* border-bottom: 1px solid var(--colorDark); */
 }
 
 .sidetimesheet__cal {
-    position: absolute;
-    left: 0;
     font-family: 'Helvetica Neue';
     font-style: normal;
     width: min-content;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1.116vw;
     line-height: 107%;
     color: var(--colorDark);
 }
@@ -105,7 +107,7 @@
     font-family: 'Druk';
     font-style: italic;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 5.952vw;
     line-height: 85%;
     text-align: center;
     letter-spacing: 0.01em;
@@ -113,7 +115,7 @@
     -webkit-text-stroke: 1px var(--colorDark);
     text-stroke: 1px var(--colorDark);
     color: var(--colorOrange);
-    transform: translateY(5px)
+    transform: translateY(0.372vw)
 }
 
 
@@ -122,7 +124,7 @@
     grid-template-columns: repeat(5, 1fr);
 
     width: 100%;
-    min-height: 70px;
+    min-height: 5.208vw;
     border-top: 1px solid var(--colorDark);
 }
 
@@ -132,7 +134,7 @@
     background-position: center;
 }
 
-.sidetimesheet__stop{
+.sidetimesheet__stop {
     background-image: url(~/assets/images/stop.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -145,7 +147,7 @@
     font-family: 'Druk';
     font-style: italic;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 5.952vw;
     line-height: 85%;
     text-align: center;
     letter-spacing: 0.01em;
@@ -165,10 +167,9 @@
 
 .sidetimesheet__reg-status {
     grid-column: span 2;
+    font-size: 1.116vw;
     /* grid-column-end: span col4-start; */
     margin: auto;
     text-align: center;
 }
-
-
 </style>

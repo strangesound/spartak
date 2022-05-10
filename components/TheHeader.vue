@@ -35,7 +35,7 @@
 <style>
 .header {
   background-color: var(--colorDark);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 0;
   padding: 0.595vw 0 0 0;
   /* width: 75%; */
@@ -145,7 +145,7 @@
   background-size: contain;
   background-position: center;
   width: 100%;
-  height: 50.333vh;
+  padding-bottom: 29.86%;
 }
 
 .header__center-logo100 {
@@ -162,7 +162,7 @@
 }
 
 .header__h2 {
-  padding-bottom: 30px;
+  padding-bottom: 2.232vw;
   color: var(--colorLight);
   font-family: 'Druk';
   font-style: italic;
@@ -173,7 +173,7 @@
   /* overflow: hidden; */
   white-space: nowrap;
   text-overflow: clip;
-  padding-top: 20px;
+  padding-top: 1.488vw;
   min-width: 0;
   animation-name: ticker;
   animation-duration: 10s;
