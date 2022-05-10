@@ -127,7 +127,9 @@
     line-height: 96%;
     letter-spacing: -0.01em;
     color: var(--colorLight);
+    border-top: solid 1px var(--colorLight);
 }
+
 
 .timesheet__timetable-grid-description-text {
     font-family: 'Helvetica Neue';
@@ -160,6 +162,7 @@
 
 .timesheet__slot-arrow {
     background-image: url(~/assets/images/arr2.svg);
+    background-repeat: no-repeat;
     width: 1.190vw;
     height: 1.190vw;
 }

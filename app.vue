@@ -31,10 +31,3 @@
 
 }
 </style>
-
-<script>  
-setTimeout(function(){
-    FirstAnimation.remove();
-}, 5000); 
-
-</script>
