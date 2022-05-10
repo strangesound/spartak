@@ -19,7 +19,7 @@
         </div>
 
 
-        <div class="sidetimesheet__one-row">
+        <div class="sidetimesheet__one-row active">
             <div class="sidetimesheet__play"></div>
             <p class="sidetimesheet__day">07</p>
             <div class="sidetimesheet__reg-status">открыта регистрация</div>
@@ -133,7 +133,7 @@
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
     min-height: 5.208vw;
-    border-top: 1px solid var(--colorDark);
+    /* border-top: 1px solid var(--colorDark); */
     transition: hover 1s;
     cursor: pointer;
     z-index: 2;
@@ -153,6 +153,34 @@
     background-color: var(--colorLight);
     transform: translateY(1.2vw);
 }
+
+.sidetimesheet__one-row::after {
+    content: "";
+    position: absolute;
+    width: calc(100%-1.19vw);
+    margin-left: 0;
+    height: 1px;
+    background-color: var(--colorDark);
+    transform: translateY(-.2vw);
+}
+
+.active {
+    background-color: var(--colorDark);
+    /* color: var(--colorLight); */
+    width: calc(100%);
+    margin: 0.35vw 0 ;
+    border-radius: 0.893vw;
+    /* transform: translateX(-10); */
+}
+
+.active p{
+    color: var(--colorLight);
+}
+
+.active div{
+    filter: invert(100%)
+}
+
 
 .sidetimesheet__play {
     background-image: url(~/assets/images/play.svg);
@@ -180,7 +208,7 @@
     text-transform: uppercase;
     color: var(--colorDark);
 
-    transform: translateY(0.372vw)
+    transform: translateY(0.35vw)
 }
 
 .sidetimesheet__day-disable {
@@ -188,7 +216,7 @@
     text-stroke: 1px var(--colorDark);
     color: var(--colorOrange);
 
-    transform: translateY(0.372vw)
+    transform: translateY(0.35vw)
 }
 
 .sidetimesheet__reg-status {

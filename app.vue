@@ -7,6 +7,7 @@
 
         <TheHeader />
         <Banner1922 />
+        <Timesheet />
       </div>
       <SideTimesheet />
     </div>
