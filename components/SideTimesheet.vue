@@ -1,12 +1,5 @@
 <template>
     <section class="sidetimesheet">
-        <div class="vline-container">
-            <div class="vline"></div>
-            <div class="vline"></div>
-            <div class="vline"></div>
-            <div class="vline"></div>
-            <div class="vline"></div>
-        </div>
         <div class="sidetimesheet__top-row">
             <p class="sidetimesheet__cal">Календарь событий</p>
             <p class="sidetimesheet__month">Июнь</p>
@@ -60,7 +53,6 @@
             <div class="sidetimesheet__reg-status">открыта регистрация</div>
         </div>
 
-
         <div class="sidetimesheet__one-row">
             <div class="sidetimesheet__play"></div>
             <p class="sidetimesheet__day">12</p>
@@ -70,6 +62,15 @@
         <button class="btn">Матч 1922</button>
         <button class="btn">Регистрация СМИ</button>
 
+        <div class="vline-container">
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+        </div>
+
+
     </section>
 
 </template>
@@ -78,7 +79,6 @@
 .sidetimesheet {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     background-color: var(--colorOrange);
     padding: 0.595vw;
     z-index: 999;
@@ -91,6 +91,7 @@
 }
 
 .sidetimesheet__top-row {
+    z-index: 5;
     position: relative;
     display: flex;
     align-items: center;
@@ -130,10 +131,27 @@
 .sidetimesheet__one-row {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-
     width: 100%;
     min-height: 5.208vw;
     border-top: 1px solid var(--colorDark);
+    transition: hover 1s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* .sidetimesheet__one-row-hover{
+    display: block;
+   background-color: orange;
+   opacity: 0; 
+} */
+.sidetimesheet__one-row:hover::before {
+    content: "";
+    position: absolute;
+    width: calc(100%+1.190vw);
+    margin-left: -1.190vw;
+    height: 2px;
+    background-color: var(--colorLight);
+    transform: translateY(1.2vw);
 }
 
 .sidetimesheet__play {
@@ -188,7 +206,7 @@
     height: calc(100%-1.190vw);
     flex-direction: row;
     justify-content: space-between;
-    /* z-index: 10000; */
+    z-index: 1;
 
 
 }

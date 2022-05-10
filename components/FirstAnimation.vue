@@ -102,7 +102,7 @@
 
     100% {
         display: none;
-        visibility: none;
+        visibility: hidden;
         opacity: 0;
     }
 
@@ -121,9 +121,10 @@
     }
 
     100% {
-        display: none;
-        visibility: none;
         opacity: 0;
+        visibility: hidden;
+        display: none;
+
     }
 
 }
@@ -142,9 +143,9 @@
 
 
     100% {
-        display: none;
-        visibility: none;
         opacity: 0;
+        visibility: hidden;
+        display: none;
     }
 
 }
