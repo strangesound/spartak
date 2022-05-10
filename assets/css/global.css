@@ -1,0 +1,42 @@
+@font-face {
+     font-family: 'Druk';
+     font-style: italic;
+     font-weight: 400;
+     font-display: swap;
+     src: url(~/assets/fonts/DrukCondensed-XSuperItalic-Desktop.otf/) format('opentype');
+}
+
+:root {
+     --colorRed: #D80E22;
+     --colorOrange: #FF5D0C;
+     --colorYellow: #F8D62F;
+     --colorDark: #000;
+     --colorLight: #fff;
+}
+
+html * {
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+.btn {
+     width: 100%;
+     padding: 10px 0;
+     background-color: var(--colorDark);
+     color: var(--colorLight);
+     text-align: center;
+ 
+     font-family: 'Helvetica Neue';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 15px;
+     line-height: 107%;
+     border-radius: 24px;
+     margin-top: 5px;
+     cursor: pointer;
+     border: 0;
+ 
+ }
+ 
+ .btn:hover {
+     opacity: .8;
+ }
