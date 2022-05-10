@@ -98,7 +98,7 @@
     width: 100%;
     min-height: 5.208vw;
     padding: 0.595vw;
-    /* border-bottom: 1px solid var(--colorDark); */
+    border-top: 1px solid var(--colorDark);
 }
 
 .sidetimesheet__cal {
@@ -184,7 +184,7 @@
 .vline-container {
     position: absolute;
     display: flex;
-    width: 100%;
+    width: calc(100%-1.190vw);
     height: calc(100%-1.190vw);
     flex-direction: row;
     justify-content: space-between;

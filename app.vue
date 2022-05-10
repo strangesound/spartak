@@ -1,7 +1,10 @@
 <template>
+  <FirstAnimation />
+
   <div class="container1344">
     <div class="grid-container">
       <div class="left-side">
+
         <TheHeader />
         <Banner1922 />
       </div>

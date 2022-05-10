@@ -41,6 +41,7 @@ body{
      margin-top: 0.372vw;
      cursor: pointer;
      border: 0;
+     transition-duration: color .5s;
  
  }
  
