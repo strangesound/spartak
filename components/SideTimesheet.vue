@@ -1,5 +1,12 @@
 <template>
     <section class="sidetimesheet">
+        <div class="vline-container">
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+            <div class="vline"></div>
+        </div>
         <div class="sidetimesheet__top-row">
             <p class="sidetimesheet__cal">Календарь событий</p>
             <p class="sidetimesheet__month">Июнь</p>
@@ -90,6 +97,7 @@
     justify-content: space-between;
     width: 100%;
     min-height: 5.208vw;
+    padding: 0.595vw;
     /* border-bottom: 1px solid var(--colorDark); */
 }
 
@@ -154,7 +162,7 @@
     text-transform: uppercase;
     color: var(--colorDark);
 
-    transform: translateY(5px)
+    transform: translateY(0.372vw)
 }
 
 .sidetimesheet__day-disable {
@@ -162,7 +170,7 @@
     text-stroke: 1px var(--colorDark);
     color: var(--colorOrange);
 
-    transform: translateY(5px)
+    transform: translateY(0.372vw)
 }
 
 .sidetimesheet__reg-status {
@@ -171,5 +179,25 @@
     /* grid-column-end: span col4-start; */
     margin: auto;
     text-align: center;
+}
+
+.vline-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: calc(100%-1.190vw);
+    flex-direction: row;
+    justify-content: space-between;
+    /* z-index: 10000; */
+
+
+}
+
+.vline {
+    width: 1px;
+    background-color: var(--colorDark);
+    /* height: calc(100%-2vw); */
+    opacity: .1;
+
 }
 </style>
