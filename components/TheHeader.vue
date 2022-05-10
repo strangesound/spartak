@@ -14,7 +14,7 @@
           </div>
         </div>
         <p class="header__description">
-          Столетняя история легендарного клуба и его болельщиков, объединённая в 8 тематических мероприятиях
+          Столетняя история легендарного клуба и&nbsp;его болельщиков, объединённая в&nbsp;8&nbsp;тематических мероприятиях
         </p>
       </div>
     </div>
@@ -37,7 +37,7 @@
   background-color: var(--colorDark);
   min-height: 100vh;
   margin: 0;
-  padding: 10px 0 0 0;
+  padding: 0.595vw 0 0 0;
   /* width: 75%; */
 
 }
@@ -50,7 +50,7 @@
 }
 
 .header__description {
-  margin-bottom: 20px;
+  margin-bottom: 1.488vw;
 }
 
 .header__date-logos {
@@ -63,26 +63,30 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
-
 }
 
 .header__top-container {
   display: flex;
   flex-direction: row;
-  padding-right: 20px;
+  padding-right: 1.488vw;
 }
 
 .header__logo1 {
   position: relative;
+  width: 8.780vw;
+}
+
+.header__logo2 {
+  position: relative;
+  width: 7.440vw;
 }
 
 .header__logo-separator {
   display: block;
   /* position: absolute; */
   width: 1px;
-  height: 48px;
-  margin: 0 13px;
+  height: 3.571vw;
+  margin: 0 0.967vw;
 
   background-color: var(--colorLight);
 }
@@ -110,7 +114,7 @@
   font-size: 20.536vw;
   line-height: 78%;
   text-transform: uppercase;
-  margin: 15px 40px 0 0;
+  margin: 1.116vw 2.976vw 0 0;
 }
 
 .header__h1 span {
@@ -127,7 +131,7 @@
   font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 1.86vw;
   line-height: 96%;
   letter-spacing: -0.01em;
   color: var(--colorLight);
@@ -163,7 +167,7 @@
   font-family: 'Druk';
   font-style: italic;
   font-weight: 400;
-  font-size: 276px;
+  font-size: 20.536vw;
   line-height: 78%;
   text-transform: uppercase;
   /* overflow: hidden; */
