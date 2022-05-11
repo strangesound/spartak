@@ -11,6 +11,7 @@
      --colorOrange: #FF5D0C;
      --colorYellow: #F8D62F;
      --colorDark: #000;
+     --colorDark2: #4D4D4D;
      --colorLight: #fff;
 }
 
@@ -41,7 +42,7 @@ body{
      margin-top: 0.372vw;
      cursor: pointer;
      border: 0;
-     transition-duration: color .5s;
+     transition: .3s;
  
  }
  

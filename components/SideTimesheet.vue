@@ -1,4 +1,25 @@
+
+<script>
+import FormTest from "./FormTest.vue";
+
+export default {
+    components: { FormTest },
+    data() {
+        return {
+            showModal: false,
+        }
+    },
+
+}
+</script>
+
+
+
 <template>
+
+    <FormTest v-show="showModal" @close-modal="showModal = false"/>
+
+
     <section class="sidetimesheet">
         <div class="sidetimesheet__top-row">
             <p class="sidetimesheet__cal">Календарь событий</p>
@@ -59,8 +80,8 @@
             <div class="sidetimesheet__reg-status">открыта регистрация</div>
         </div>
 
-        <button class="btn">Матч 1922</button>
-        <button class="btn">Регистрация СМИ</button>
+        <button class="btn" @click="showModal = true">Матч 1922</button>
+        <button class="btn" @click="showModal = true">Регистрация СМИ</button>
 
         <div class="vline-container">
             <div class="vline"></div>
@@ -147,7 +168,7 @@
 .sidetimesheet__one-row:hover::before {
     content: "";
     position: absolute;
-    width: calc(105%);
+    width: 105%;
     margin-left: -1.190vw;
     height: 2px;
     background-color: var(--colorLight);
@@ -157,7 +178,7 @@
 .sidetimesheet__one-row::after {
     content: "";
     position: absolute;
-    width: calc(100%-5%);
+    width: 95%;
     margin-left: 0;
     height: 1px;
     background-color: var(--colorDark);
@@ -167,7 +188,7 @@
 .active {
     background-color: var(--colorDark);
     /* color: var(--colorLight); */
-    width: calc(100%);
+    width: 100%;
     margin: 0.35vw 0 ;
     border-radius: 0.893vw;
     /* transform: translateX(-10); */
@@ -230,8 +251,8 @@
 .vline-container {
     position: absolute;
     display: flex;
-    width: calc(100%-5%);
-    height: calc(100%-1.19%);
+    width: 95%;
+    height: 98%;
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
