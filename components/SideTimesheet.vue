@@ -147,7 +147,7 @@
 .sidetimesheet__one-row:hover::before {
     content: "";
     position: absolute;
-    width: calc(100%+1.190vw);
+    width: calc(105%);
     margin-left: -1.190vw;
     height: 2px;
     background-color: var(--colorLight);
@@ -157,7 +157,7 @@
 .sidetimesheet__one-row::after {
     content: "";
     position: absolute;
-    width: calc(100%-1.19vw);
+    width: calc(100%-5%);
     margin-left: 0;
     height: 1px;
     background-color: var(--colorDark);
@@ -230,8 +230,8 @@
 .vline-container {
     position: absolute;
     display: flex;
-    width: calc(100%-1.190vw);
-    height: calc(100%-1.190vw);
+    width: calc(100%-5%);
+    height: calc(100%-1.19%);
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
@@ -242,7 +242,6 @@
 .vline {
     width: 1px;
     background-color: var(--colorDark);
-    /* height: calc(100%-2vw); */
     opacity: .1;
 
 }
