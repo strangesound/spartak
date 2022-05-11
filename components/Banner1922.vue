@@ -69,7 +69,7 @@ export default {
 }
 
 .banner1922__text {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
     font-size: 1.860vw;
@@ -82,7 +82,7 @@ export default {
 }
 
 .banner1922__main-text {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
     font-size: 1.860vw;

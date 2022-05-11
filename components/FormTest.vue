@@ -104,7 +104,7 @@
   /* margin: 5px 0 22px 0; */
   border: none;
   background: none;
-  font-family: 'Helvetica Neue';
+  font-family: 'Helvetica';
   font-style: normal;
   font-weight: 400;
   font-size: 1.860vw;
@@ -159,7 +159,7 @@
 }
 
 .form-head {
-  font-family: 'Helvetica Neue';
+  font-family: 'Helvetica';
   font-style: normal;
   font-weight: 400;
   font-size: 1.860vw;
@@ -170,7 +170,7 @@
 }
 
 .form-datetime {
-  font-family: 'Helvetica Neue';
+  font-family: 'Helvetica';
   font-style: normal;
   font-weight: 400;
   font-size: 1.860vw;

@@ -124,7 +124,7 @@ export default {
 }
 
 .sidetimesheet__cal {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica';
     font-style: normal;
     width: min-content;
     font-weight: 400;

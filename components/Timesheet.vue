@@ -120,7 +120,7 @@
 
 .timesheet__timetable-grid-time,
 .timesheet__timetable-grid-description-head {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
     font-size: 1.860vw;
@@ -132,7 +132,7 @@
 
 
 .timesheet__timetable-grid-description-text {
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
     font-size: 1.116vw;
@@ -175,7 +175,7 @@
     /* display: flex;
     flex-direction: row; */
 
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
     font-size: 1.116vw;
