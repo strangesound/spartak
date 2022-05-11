@@ -1,5 +1,5 @@
 <template>
-  <FirstAnimation />
+  <!-- <FirstAnimation /> -->
 
   <div class="container1344">
     <div class="grid-container">
