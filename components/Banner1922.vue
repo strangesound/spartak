@@ -1,4 +1,22 @@
+
+<script>
+import FormTest from "./FormTest.vue";
+
+export default {
+    components: { FormTest },
+    data() {
+        return {
+            showModal: false,
+        }
+    },
+
+}
+</script>
+
 <template>
+
+    <FormTest v-show="showModal" @close-modal="showModal = false"/>
+
     <div class="banner1922">
         <div class="banner1922__left">
             <div class="banner1922__top-text-container">
@@ -7,8 +25,9 @@
             </div>
             <div class="banner1922__arrow"></div>
 
-            <p class="banner1922__main-text">Каждый желающий может провести свою игру на&nbsp;лодке и&nbsp;стать частью истории</p>
-            <button class="btn">Записаться на матч</button>
+            <p class="banner1922__main-text">Каждый желающий может провести свою игру на&nbsp;лодке и&nbsp;стать частью
+                истории</p>
+            <button class="btn" @click="showModal = true">Записаться на матч</button>
 
         </div>
         <div class="banner1922__right"></div>
@@ -62,8 +81,8 @@
 
 }
 
-.banner1922__main-text{
-        font-family: 'Helvetica Neue';
+.banner1922__main-text {
+    font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 400;
     font-size: 1.860vw;
@@ -94,3 +113,5 @@
 
 }
 </style>
+
+
