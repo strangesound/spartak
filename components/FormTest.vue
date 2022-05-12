@@ -1,5 +1,4 @@
 <template>
-  <!-- <button type="button" class="btn topleft" @click.prevent="toggleModal">open</button> -->
   <transition name="fade">
 
     <div class="form-popup" id="myForm" @click="$emit('close-modal')">

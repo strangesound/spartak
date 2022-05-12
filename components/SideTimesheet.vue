@@ -8,9 +8,12 @@ export default {
     data() {
         return {
             showModal: false,
-        },
-        {
+        }
+    },
+    data() {
+        return {
             showBurger: true
+
         }
     }
 
@@ -171,7 +174,7 @@ label {
     }
 
     label span {
-        background: var(--colorOrange);
+        background: var(--colorLight);
         border-radius: 10px;
         height: 5px;
         margin: 3px 0;
@@ -204,7 +207,7 @@ label {
     input[type="checkbox"]:checked~span:nth-of-type(1) {
         transform-origin: bottom;
         transform: rotatez(45deg) translate(4px, 0px);
-        background: var(--colorDark);
+        background: var(--colorLight);
 
     }
 
@@ -213,7 +216,7 @@ label {
 
         transform-origin: top;
         transform: rotatez(-45deg);
-        background: var(--colorDark);
+        background: var(--colorLight);
 
     }
 
@@ -223,7 +226,7 @@ label {
         transform-origin: bottom;
         width: 50%;
         transform: translate(17px, -6px) rotatez(45deg);
-        background: var(--colorDark);
+        background: var(--colorLight);
 
 
     }
@@ -433,7 +436,8 @@ label {
     .vline-container {
         width: calc(100%-16px);
     }
-    .sidetimesheet__one-row{
+
+    .sidetimesheet__one-row {
 
         /* margin-top: 4px; */
         /* margin-bottom: 4px; */
@@ -456,7 +460,7 @@ label {
         /* transform: translateX(-10); */
     }
 
-    .sidetimesheet__day{
+    .sidetimesheet__day {
         margin: 8px;
         transform: translateY(-1vw);
     }
