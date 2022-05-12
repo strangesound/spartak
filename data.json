@@ -1,6 +1,6 @@
 [
     {
-        "day": "5",
+        "day": "05",
         "slot_number": "1",
         "slot_start_time": "12:00",
         "slot_end_time": "15:30",
@@ -15,7 +15,7 @@
         "route": "Мост Багратион – Петр 1 – Мост Багратион"
     },
     {
-        "day": "5",
+        "day": "05",
         "slot_number": "1",
         "slot_start_time": "12:00",
         "slot_end_time": "15:30",
@@ -30,7 +30,7 @@
         "route": "Мост Багратион – Петр 1 – Мост Багратион"
     },
     {
-        "day": "5",
+        "day": "05",
         "slot_number": "2",
         "slot_start_time": "16:00",
         "slot_end_time": "19:30",
@@ -45,7 +45,7 @@
         "route": "Мост Багратион – Фрунзенская – Мост Багратион\n\n"
     },
     {
-        "day": "5",
+        "day": "05",
         "slot_number": "2",
         "slot_start_time": "16:00",
         "slot_end_time": "19:30",
@@ -60,10 +60,10 @@
         "route": "Мост Багратион – Фрунзенская – Мост Багратион"
     },
     {
-        "day": "5",
+        "day": "05",
         "slot_number": "3",
         "slot_start_time": "20:00",
-        "slot_end_time": "24:00:00",
+        "slot_end_time": "24:00",
         "name": "Съемки выпуска шоу \"Что было дальше?\"",
         "description": "Участие в записи \"спартаковского\" выпуска шоу \"Что было дальше?\". Попасть на запись можно сделав ставку 1922 рубля на любое событие дня в приложении Winline.",
         "eventStartTime": "20:30",
@@ -77,7 +77,7 @@
     
     
     {
-        "day": "6",
+        "day": "06",
         "slot_number": "1",
         "slot_start_time": "12:00",
         "slot_end_time": "14:30",
@@ -92,7 +92,7 @@
         "route": "Багратион – Фрунзенская - Багратион"
     },
     {
-        "day": "6",
+        "day": "06",
         "slot_number": "2",
         "slot_start_time": "15:00",
         "slot_end_time": "18:30",
@@ -107,7 +107,7 @@
         "route": "Багратион – Петр 1 – Багратион"
     },
     {
-        "day": "6",
+        "day": "06",
         "slot_number": "3",
         "slot_start_time": "19:30",
         "slot_end_time": "21:30",
@@ -124,11 +124,11 @@
     
     
     {
-        "day": "7",
+        "day": "07",
         "slot_number": "1",
         "slot_start_time": "12:00",
         "slot_end_time": "14:30",
-        "name": "null",
+        "name": "",
         "description": "Свободное плавание по Москва реке в атмосфере красно-белых",
         "eventStartTime": "12:00",
         "eventEndTime": "14:30",
@@ -139,11 +139,11 @@
         "route": "Багратион – Фрунзенская"
     },
     {
-        "day": "7",
+        "day": "07",
         "slot_number": "2",
         "slot_start_time": "15:00",
         "slot_end_time": "18:30",
-        "name": "null",
+        "name": "",
         "description": "Свободное плавание по Москва реке в атмосфере красно-белых",
         "eventStartTime": "15:00",
         "eventEndTime": "17:30",
@@ -154,11 +154,11 @@
         "route": "Багратион – Петр 1"
     },
     {
-        "day": "7",
+        "day": "07",
         "slot_number": "3",
         "slot_start_time": "19:30",
         "slot_end_time": "22:00",
-        "name": "null",
+        "name": "",
         "description": "Непренужденный разговор о футболе, Спартаке и атомсферной Тарасовке с легендой 50-х – Анзором Кавазашвили",
         "eventStartTime": "19:30",
         "eventEndTime": "20:15",
@@ -169,11 +169,11 @@
         "route": "Багратион – Фрунзенская"
     },
     {
-        "day": "7",
+        "day": "07",
         "slot_number": "3",
         "slot_start_time": "19:30",
         "slot_end_time": "22:00",
-        "name": "null",
+        "name": "",
         "description": "Джазовый концерт от \"Имя 1\" и \"Имя 2\", посвященный эпохе оттепели, которую футболисты ФК \"Спартак\" провели слушая главных  джазменов мира",
         "eventStartTime": "20:15",
         "eventEndTime": "22:00",
@@ -186,7 +186,7 @@
     
     
     {
-        "day": "8",
+        "day": "08",
         "slot_number": "1",
         "slot_start_time": "12:00",
         "slot_end_time": "15:30",
@@ -201,7 +201,7 @@
         "route": "Багратион – Петр 1 – Багратион"
     },
     {
-        "day": "8",
+        "day": "08",
         "slot_number": "2",
         "slot_start_time": "16:00",
         "slot_end_time": "18:30",
@@ -216,7 +216,7 @@
         "route": "Багратион – Фрунзенская – Багратион"
     },
     {
-        "day": "8",
+        "day": "08",
         "slot_number": "3",
         "slot_start_time": "19:30",
         "slot_end_time": "22:00",
@@ -233,7 +233,7 @@
     
     
     {
-        "day": "9",
+        "day": "09",
         "slot_number": "1",
         "slot_start_time": "12:00",
         "slot_end_time": "15:30",
@@ -248,7 +248,7 @@
         "route": "Багратион – Петр 1"
     },
     {
-        "day": "9",
+        "day": "09",
         "slot_number": "2",
         "slot_start_time": "16:00",
         "slot_end_time": "18:30",
@@ -263,7 +263,7 @@
         "route": "Багратион – Фрунзенская"
     },
     {
-        "day": "9",
+        "day": "09",
         "slot_number": "3",
         "slot_start_time": "19:30",
         "slot_end_time": "22:00",
@@ -278,7 +278,7 @@
         "route": "Багратион – Фрунзенская"
     },
     {
-        "day": "9",
+        "day": "09",
         "slot_number": "3",
         "slot_start_time": "19:30",
         "slot_end_time": "22:00",
@@ -360,7 +360,7 @@
         "slot_start_time": "19:00",
         "slot_end_time": "22:30",
         "name": "ПРЕЗЕНТАЦИЯ СЕРИАЛА «СПАРТАК-90х» с КИНОПОИСКОМ",
-        "description": "null",
+        "description": "",
         "eventStartTime": "20:45",
         "eventEndTime": "22:30",
         "how_much_registration": "-1",
@@ -379,7 +379,7 @@
         "name": "Утренний Winliner",
         "description": "Утренняя студия с Л.А. Федуном на Winliner. Итоги, планы и будущее ФК \"Спартак\"",
         "eventStartTime": "11:00",
-        "eventEndTime": "null",
+        "eventEndTime": "",
         "how_much_registration": "-1",
         "need_stavka": "0",
         "need_winline_registr": "1",
@@ -394,7 +394,7 @@
         "name": "Старт \"Легендарного матча 1922\"",
         "description": "Легендарный матч 1922 – это футбольный матч для всех красно-белых, это 1922 минуты беспрерывного футбола на Winliner и возможность стать частью новой истории ФК \"Спартак\"",
         "eventStartTime": "11:20",
-        "eventEndTime": "null",
+        "eventEndTime": "",
         "how_much_registration": "-1",
         "need_stavka": "0",
         "need_winline_registr": "1",
@@ -436,7 +436,7 @@
         "slot_number": "2",
         "slot_start_time": "14:30",
         "slot_end_time": "18:00",
-        "name": "null",
+        "name": "",
         "description": "Парный турнир по FIFA среди популярных фиферов и друзей Спартака!",
         "eventStartTime": "16:30",
         "eventEndTime": "18:00",
@@ -466,7 +466,7 @@
         "slot_number": "3",
         "slot_start_time": "19:00",
         "slot_end_time": "21:30",
-        "name": "null",
+        "name": "",
         "description": "Автограф-сессия с игроками киберспортивных команд Virtus Pro и Forze",
         "eventStartTime": "20:10",
         "eventEndTime": "21:00",
@@ -481,7 +481,7 @@
         "slot_number": "3",
         "slot_start_time": "19:00",
         "slot_end_time": "21:30",
-        "name": "null",
+        "name": "",
         "description": "PUBLIC TALK. РАЗГОВОР С ЛЕГИОНЕРАМИ\n\nКвинси, Алекс, Ковалевски, Плетикоса, Джон Терри",
         "eventStartTime": "19:22",
         "eventEndTime": "21:00",
@@ -520,7 +520,7 @@
         "how_much_registration": "-1",
         "need_stavka": "0",
         "need_winline_registr": "0",
-        "condition": "null",
+        "condition": "",
         "route": "Багратион – Фрунзенская – Багратион"
     },
     {
@@ -535,7 +535,7 @@
         "how_much_registration": "-1",
         "need_stavka": "0",
         "need_winline_registr": "0",
-        "condition": "null",
+        "condition": "",
         "route": "Багратион – Петр 1 – Багратион"
     },
     {
@@ -550,7 +550,7 @@
         "how_much_registration": "-1",
         "need_stavka": "0",
         "need_winline_registr": "0",
-        "condition": "null",
+        "condition": "",
         "route": "Багратион – Петр 1 – Багратион"
     },
     {
@@ -561,11 +561,11 @@
         "name": "Завершающая вечеринка Basement",
         "description": "100 years anniversary. Завершающая вечеринка от промо-команды Basement, посвященная 100-летию ФК \"Спартак\"",
         "eventStartTime": "21:00",
-        "eventEndTime": "24:00:00",
+        "eventEndTime": "24:00",
         "how_much_registration": "-1",
         "need_stavka": "0",
         "need_winline_registr": "0",
-        "condition": "null",
+        "condition": "",
         "route": "Багратион – Петр 1 – Багратион"
     }
 ]

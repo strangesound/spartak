@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import data from "@/data.json";
+// import TimesheetOneRowVue from "./TimesheetOneRow.vue"
+// const data = myEvents;
+// export default {
+//     components: { TimesheetOneRowVue },
+
+// }
+
+</script>
+
 <template>
     <section class="timesheet">
         <div class="timesheet__first-block">
@@ -6,39 +17,18 @@
                 с&nbsp;несколькими активностями. В&nbsp;течении временного слота вы&nbsp;не&nbsp;можете покинуть лодку
                 и&nbsp;нельзя опаздывать&nbsp;&mdash; лодка отплывает по&nbsp;расписанию.</p>
         </div>
-        <p class="slot-selection-text">Выбор слота</p>
-        <div class="timesheet__timetable-grid">
-            <div class="timesheet__day">
-                <div class="timesheet__day-sheet-container">
-                    <div class="timesheet__day-container">
-                        <p class="timesheet__day-number">06</p>
-                        <p class="timesheet__month">июня</p>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="timesheet__timetable-grid-description">
-                <div class="timesheet__timetable-grid-time">12:00—14:30</div>
-                <div>
-                    <h3 class="timesheet__timetable-grid-description-head">Скиллс челлендж с блогерами и тренерами
-                        академии ФК Спартак</h3>
-                    <p class="timesheet__timetable-grid-description-text">Стать самым надежным букмекером из
-                        когда-либо существовавших</p>
-                </div>
-            </div>
-            <div class="timesheet__slot">
-                <p>12:00—14:30</p>
-                <div class="timesheet__slot-arrow"></div>
-            </div>
-
-        </div>
-
+        <!-- <TimesheetOneRow /> -->
+        <TimesheetOneRow v-for="event in data" :key="event.name" :day="event.day"
+            :eventStartTime="event.eventStartTime" :eventEndTime="event.eventEndTime" :name="event.name" :description="event.description"
+            :slot_start_time="event.slot_start_time"
+            :slot_end_time="event.slot_end_time" />
+        <!-- {{ console.log("day") }} -->
     </section>
-
 </template>
 
-<style>
+<style scoped>
+
+
 .timesheet {
     background-color: #292929;
     padding: 5.357vw 0.595vw;
@@ -74,136 +64,6 @@
 
 }
 
-.timesheet__day-container {
-    display: flex;
-    flex-direction: row;
-    color: var(--colorLight);
-
-}
-
-.timesheet__day-number {
-    font-family: 'Druk';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 5.952vw;
-    line-height: 85%;
-    /* identical to box height, or 85% */
-
-    text-align: center;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    margin-right: .7vw;
-
-
-}
-
-.timesheet__month {
-    color: #929292;
-}
-
-.timesheet__month::before {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #929292;
-}
-
-.timesheet__timetable-grid {
-    display: grid;
-    grid-template-columns: 1.8fr 5fr 2fr;
-    grid-gap: 1.190vw;
-}
-
-.timesheet__timetable-grid-description {
-    border-top: solid 1px var(--colorLight);
-    display: flex;
-    flex-direction: row;
-}
-
-.timesheet__timetable-grid-time {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.860vw;
-    line-height: 96%;
-    letter-spacing: -0.01em;
-    color: var(--colorLight);
-    white-space: nowrap;
-    padding-right: 1.190vw;
-
-}
-
-.timesheet__timetable-grid-description-head {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.860vw;
-    line-height: 96%;
-    letter-spacing: -0.01em;
-    color: var(--colorLight);
-    /* white-space: nowrap; */
-}
-
-
-.timesheet__timetable-grid-description-text {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.116vw;
-    line-height: 107%;
-    letter-spacing: -0.01em;
-    color: #929292;
-
-}
-
-.timesheet__slot {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.116vw;
-    line-height: 107%;
-    color: var(--colorOrange);
-    border: 1.4px solid var(--colorOrange);
-    border-radius: 12px;
-    padding: 0.595vw;
-
-}
-
-.timesheet__slot-arrow {
-    background-image: url(~/assets/images/arr2.svg);
-    background-repeat: no-repeat;
-    width: 1.190vw;
-    height: 1.190vw;
-}
-
-
-
-.slot-selection-text {
-    margin-top: 5.208vw;
-
-    /* display: flex;
-    flex-direction: row; */
-
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.116vw;
-    line-height: 107%;
-    letter-spacing: -0.01em;
-    color: var(--colorOrange);
-    width: 100%;
-    text-align: right;
-    /* margin-left: auto; */
-    margin-bottom: 1.190vw;
-    padding-right: 4.5vw;
-
-}
 
 @media (max-width: 575.98px) {
 
@@ -227,53 +87,6 @@
 
     }
 
-    .timesheet__timetable-grid {
-        grid-template-columns: 1fr;
-        padding-top: 32px;
-    }
-
-    .timesheet__day-number {
-        font-size: 18vw;
-        padding-right: 8px;
-
-    }
-
-    .slot-selection-text,
-    .timesheet__timetable-grid-description-text {
-        font-size: 3.348vw;
-    }
-
-    .timesheet__timetable-grid-time,
-    .timesheet__timetable-grid-description-head {
-        font-size: 5.58vw;
-        white-space: normal;
-        min-width: 25vw;
-
-    }
-
-    .timesheet__timetable-grid-time{
-        padding-right: 16px;
-    }
-
-    .timesheet__slot {
-        font-size: 3.348vw;
-        padding: 1.785vw;
-        margin-top: 32px;
-    }
-    .timesheet__slot::before{
-        position: absolute;
-        content: "Зарегистрироваться в слот";
-        transform: translateY(-30px);
-
-}
-
-    .timesheet__slot-arrow {
-        width: 16px;
-        height: 16px;
-    }
-.slot-selection-text{
-    display: none;
-}
 
 }
 </style>
