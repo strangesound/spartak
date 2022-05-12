@@ -406,18 +406,60 @@ label {
 
 
 @media (max-width: 575.98px) {
-.sidetimesheet{
-    width: 75%;
-}
-.sidetimesheet__top-row{
+    .sidetimesheet {
+        width: 75%;
+        padding: 8px;
+    }
+
+
+    .sidetimesheet__cal,
+    .sidetimesheet__reg-status {
+        font-size: 3vw;
+    }
+
+    .sidetimesheet__top-row {
+        padding: 8px;
+    }
+
+    .sidetimesheet__day,
+    .sidetimesheet__month {
+        font-size: 18vw;
+    }
+
+    .btn {
+        margin-top: 8px;
+    }
+
+    .vline-container {
+        width: calc(100%-16px);
+    }
+    .sidetimesheet__one-row{
+
+        /* margin-top: 4px; */
+        /* margin-bottom: 4px; */
+
+    }
+
+    .sidetimesheet__one-row:hover::before {
+        margin-left: -16px;
+        transform: translateY(3.2vw);
+    }
+
+    .sidetimesheet__one-row::after {
+        transform: translateY(-.7vw);
+    }
+
+    .active {
+        width: 100%;
+        margin: 0.35vw 0;
+        border-radius: 12px;
+        /* transform: translateX(-10); */
+    }
+
+    .sidetimesheet__day{
+        margin: 8px;
+        transform: translateY(-1vw);
+    }
 
 }
-.sidetimesheet__day{
-    font-size: 18vw;
-}
-
-
-}
-
-
 </style>

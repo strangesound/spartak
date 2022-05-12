@@ -205,6 +205,46 @@
 .cancel:hover {
   filter: invert();
 }
+
+
+@media (max-width: 575.98px) {
+
+  .form-popup {
+    /* position: static; */
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    position: relative;
+    width: 95%;
+    padding: 8px;
+
+  }
+
+  .form-head {
+    font-size: 6vw;
+  }
+
+  .form-datetime {
+    font-size: 6vw;
+
+  }
+
+  .form-container input[type=text],
+  .form-container input[type=tel] {
+    font-size: 5.58vw;
+  }
+.cancel{
+  width: 16px;
+  height: 16px;
+  margin: 8px 8px;
+}
+
+}
 </style>
 
   

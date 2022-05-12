@@ -21,7 +21,7 @@ html * {
 
 }
 
-body{
+body {
      background-color: var(--colorDark);
 }
 
@@ -32,7 +32,7 @@ body{
      background-color: var(--colorDark);
      color: var(--colorLight);
      text-align: center;
- 
+
      font-family: 'Helvetica';
      font-style: normal;
      font-weight: 400;
@@ -43,10 +43,19 @@ body{
      cursor: pointer;
      border: 0;
      transition: .3s;
- 
- }
- 
- .btn:hover {
+
+}
+
+.btn:hover {
      background-color: var(--colorLight);
      color: var(--colorDark);
- }
+}
+
+@media (max-width: 575.98px) {
+
+     .btn {
+          font-size: 3.348vw;
+          padding: 8px;
+          border-radius: 16px;
+     }
+}

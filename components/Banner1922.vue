@@ -112,6 +112,36 @@ export default {
 
 
 }
+
+@media (max-width: 575.98px) {
+
+.banner1922{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.banner1922__main-text, .banner1922__text{
+    font-size: 5.58vw;
+}
+
+.banner1922__main-text{
+    margin-bottom: 8px;
+}
+.banner1922__year{
+    font-size: 18vw;
+}
+
+.banner1922__left{
+    padding: 8px;
+}
+
+.banner1922__right{
+      grid-row-start: 1;
+
+}
+
+}
+
 </style>
 
 

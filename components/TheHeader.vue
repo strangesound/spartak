@@ -21,7 +21,7 @@
     </div>
 
     <div class="header__center-image">
-      <div class="header__center-logo100"></div>
+      <!-- <div class="header__center-logo100"></div> -->
     </div>
 
     <h2 class="header__h2">Пишем историю вместе Пишем историю вместе Пишем историю вместе Пишем историю вместе Пишем
@@ -267,6 +267,15 @@
 
 .header__description{
   font-size: 5vw;
+}
+
+.header__center-image {
+  background-size: cover;
+  padding-bottom: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -6vw 0;
 }
 
 
