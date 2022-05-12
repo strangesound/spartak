@@ -2,13 +2,17 @@
 <script>
 import FormTest from "./FormTest.vue";
 
+
 export default {
     components: { FormTest },
     data() {
         return {
             showModal: false,
+        },
+        {
+            showBurger: true
         }
-    },
+    }
 
 }
 </script>
@@ -17,10 +21,19 @@ export default {
 
 <template>
 
-    <FormTest v-show="showModal" @close-modal="showModal = false"/>
+    <FormTest v-show="showModal" @close-modal="showModal = false" />
+
+    <label for="check">
+        <input type="checkbox" id="check" @click="showBurger = !showBurger" />
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
 
 
-    <section class="sidetimesheet">
+
+    <section class="sidetimesheet" v-show="showBurger" @close-modal="showBurger = false">
+
         <div class="sidetimesheet__top-row">
             <p class="sidetimesheet__cal">Календарь событий</p>
             <p class="sidetimesheet__month">Июнь</p>
@@ -92,7 +105,9 @@ export default {
         </div>
 
 
+
     </section>
+    <div class="sidetimesheet__overlay" v-show="showBurger" @close-modal="showBurger = false"> </div>
 
 </template>
 
@@ -111,6 +126,113 @@ export default {
     width: 25%;
 }
 
+.sidetimesheet__overlay {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .sidetimesheet {
+        position: absolute;
+
+        /* transform: translateY(100px); */
+
+    }
+
+    .sidetimesheet__overlay {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, .5);
+        /* border: 3px solid #f1f1f1; */
+        z-index: 0;
+        transition: .5s;
+    }
+
+
+
+
+    /* burger btn */
+    label {
+        z-index: 5050;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    label span {
+        background: var(--colorOrange);
+        border-radius: 10px;
+        height: 5px;
+        margin: 3px 0;
+        transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    }
+
+
+    span:nth-of-type(1) {
+        width: 50%;
+
+    }
+
+    span:nth-of-type(2) {
+        width: 100%;
+    }
+
+
+    span:nth-of-type(3) {
+        width: 75%;
+
+    }
+
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+
+    input[type="checkbox"]:checked~span:nth-of-type(1) {
+        transform-origin: bottom;
+        transform: rotatez(45deg) translate(4px, 0px);
+        background: var(--colorDark);
+
+    }
+
+
+    input[type="checkbox"]:checked~span:nth-of-type(2) {
+
+        transform-origin: top;
+        transform: rotatez(-45deg);
+        background: var(--colorDark);
+
+    }
+
+
+    input[type="checkbox"]:checked~span:nth-of-type(3) {
+
+        transform-origin: bottom;
+        width: 50%;
+        transform: translate(17px, -6px) rotatez(45deg);
+        background: var(--colorDark);
+
+
+    }
+
+    /* end burger btn */
+}
+
+
+
 .sidetimesheet__top-row {
     z-index: 5;
     position: relative;
@@ -121,6 +243,13 @@ export default {
     min-height: 5.208vw;
     padding: 0.595vw;
     border-top: 1px solid var(--colorDark);
+}
+
+@media (max-width: 991.98px) {
+    .sidetimesheet__top-row {
+        margin-top: 50px;
+
+    }
 }
 
 .sidetimesheet__cal {
@@ -189,16 +318,16 @@ export default {
     background-color: var(--colorDark);
     /* color: var(--colorLight); */
     width: 100%;
-    margin: 0.35vw 0 ;
+    margin: 0.35vw 0;
     border-radius: 0.893vw;
     /* transform: translateX(-10); */
 }
 
-.active p{
+.active p {
     color: var(--colorLight);
 }
 
-.active div{
+.active div {
     filter: invert(100%)
 }
 
@@ -266,4 +395,29 @@ export default {
     opacity: .1;
 
 }
+
+@media (max-width: 991.98px) {
+    .vline-container {
+        margin-top: 50px;
+        height: calc(98%-50px);
+
+    }
+}
+
+
+@media (max-width: 575.98px) {
+.sidetimesheet{
+    width: 75%;
+}
+.sidetimesheet__top-row{
+
+}
+.sidetimesheet__day{
+    font-size: 18vw;
+}
+
+
+}
+
+
 </style>

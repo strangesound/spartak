@@ -30,7 +30,7 @@
         <!-- <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required> -->
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Записаться на матч</button>
         <button type="button" class="cancel" @click="$emit('close-modal')"></button>
 
       </form>
@@ -133,11 +133,12 @@
 .form-container input:focus.form-container input:-webkit-autofill,
 .form-container input:-webkit-autofill:hover,
 .form-container input:-webkit-autofill:focus,
-.form-container input:-webkit-autofill:active {
+.form-container input:-webkit-autofill:active,
+.form-container input:-internal-autofill-selected {
 
   background-color: none !important;
   outline: none !important;
-  box-shadow: 0 0 0 30px white inset !important;
+  /* box-shadow: 0 0 0 30px white inset !important; */
 
 }
 
