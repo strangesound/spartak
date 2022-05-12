@@ -20,7 +20,7 @@ const props = defineProps<RawProps>();
 <template>
     <div class="timesheet__timetable-grid">
         <p class="main-day-description">В этот день Winliner уплывает в самое начало пути ФК "Спартак" – в 20-30-е года,
-            когда произошло становление клуба!\n\nВместе с вами мы представим как формировался легендарный футбольный
+            когда произошло становление клуба! Вместе с вами мы представим как формировался легендарный футбольный
             клуб, воссоздадим уникальную ретро форму и проведем турнир "Московского клуба спорта".</p>
         <p class="slot-selection-text">Выбор слота</p>
     </div>
@@ -35,12 +35,14 @@ const props = defineProps<RawProps>();
             </div>
         </div>
 
-
-        <div class="timesheet__timetable-grid-description">
-            <div class="timesheet__timetable-grid-time">{{ eventStartTime + "—" + eventEndTime }}</div>
-            <div>
-                <h3 class="timesheet__timetable-grid-description-head">{{ name }}</h3>
-                <p class="timesheet__timetable-grid-description-text">{{ description }}</p>
+        <div class="container">
+            <div class="thin-line"></div>
+            <div class="timesheet__timetable-grid-description">
+                <div class="timesheet__timetable-grid-time">{{ eventStartTime + "—" + eventEndTime }}</div>
+                <div>
+                    <h3 class="timesheet__timetable-grid-description-head">{{ name }}</h3>
+                    <p class="timesheet__timetable-grid-description-text">{{ description }}</p>
+                </div>
             </div>
         </div>
         <div class="timesheet__slot">
@@ -55,6 +57,13 @@ const props = defineProps<RawProps>();
 </template>
 
 <style scoped>
+.thin-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorLight);
+    margin-bottom: 8px ;
+}
+
 .main-day-description {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -69,8 +78,7 @@ const props = defineProps<RawProps>();
     padding-top: 5vw;
     padding-bottom: 2vw;
     opacity: .5;
-
-
+    white-space: pre-line;
 }
 
 .timesheet__day-container {
@@ -138,7 +146,7 @@ const props = defineProps<RawProps>();
 }
 
 .timesheet__timetable-grid-description {
-    border-top: solid 1px var(--colorLight);
+    /* border-top: solid 1px var(--colorLight); */
     display: grid;
     grid-template-columns: 3fr 8fr;
     gap: 1.190vw;
@@ -167,6 +175,8 @@ const props = defineProps<RawProps>();
     line-height: 96%;
     letter-spacing: -0.01em;
     color: var(--colorLight);
+    white-space: pre-line;
+
     /* white-space: nowrap; */
 }
 
@@ -179,6 +189,8 @@ const props = defineProps<RawProps>();
     line-height: 107%;
     letter-spacing: -0.01em;
     color: #929292;
+    white-space: pre-line;
+    margin-top: 8px;
 
 }
 
@@ -200,11 +212,21 @@ const props = defineProps<RawProps>();
 
 }
 
+.timesheet__slot:hover{
+    background-color: var(--colorOrange);
+    color: var(--colorDark);
+    cursor: pointer;
+}
+
 .timesheet__slot-arrow {
     background-image: url(~/assets/images/arr2.svg);
     background-repeat: no-repeat;
     width: 1.190vw;
     height: 1.190vw;
+}
+
+.timesheet__slot:hover > .timesheet__slot-arrow{
+    filter: brightness(0);
 }
 
 @media (max-width: 575.98px) {
@@ -226,7 +248,8 @@ const props = defineProps<RawProps>();
         padding: 1.785vw;
         margin-top: 32px;
     }
-/* 
+
+    /* 
     .timesheet__slot::before {
         position: absolute;
         content: "Зарегистрироваться в слот";
