@@ -30,15 +30,15 @@
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 
-
 }
 
 .first__100-logo {
-    background-image: url(~/assets/images/logo100.svg);
+    background-image: url(~/assets/images/100let.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 14.881vw;
-    height: 4.025vw;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
     /* padding-top: 27.36%; */
 }
 

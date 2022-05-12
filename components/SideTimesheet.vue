@@ -1,10 +1,8 @@
 
 <script>
-import FormTest from "./FormTest.vue";
 
 
 export default {
-    components: { FormTest },
     data() {
         return {
             showModal: false,
@@ -15,7 +13,15 @@ export default {
             showBurger: true
 
         }
-    }
+    },
+    // computed: {
+    //     css() {
+    //         if (process.client) {
+    //             let width = window.innerWidth
+    //             return showBurger = width > 768 ? true : false;
+    //         }
+    //     }
+    // }
 
 }
 </script>

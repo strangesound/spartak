@@ -1,11 +1,5 @@
 <script setup lang="ts">
 import data from "@/data.json";
-// import TimesheetOneRowVue from "./TimesheetOneRow.vue"
-// const data = myEvents;
-// export default {
-//     components: { TimesheetOneRowVue },
-
-// }
 
 </script>
 
@@ -17,12 +11,10 @@ import data from "@/data.json";
                 с&nbsp;несколькими активностями. В&nbsp;течении временного слота вы&nbsp;не&nbsp;можете покинуть лодку
                 и&nbsp;нельзя опаздывать&nbsp;&mdash; лодка отплывает по&nbsp;расписанию.</p>
         </div>
-        <!-- <TimesheetOneRow /> -->
         <TimesheetOneRow v-for="event in data" :key="event.name" :day="event.day"
             :eventStartTime="event.eventStartTime" :eventEndTime="event.eventEndTime" :name="event.name" :description="event.description"
             :slot_start_time="event.slot_start_time"
             :slot_end_time="event.slot_end_time" />
-        <!-- {{ console.log("day") }} -->
     </section>
 </template>
 

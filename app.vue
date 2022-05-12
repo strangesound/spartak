@@ -1,5 +1,5 @@
 <template>
-  <!-- <FirstAnimation /> -->
+  <FirstAnimation />
 
   <div class="container1344">
     <div class="grid-container">
@@ -11,7 +11,7 @@
       <SideTimesheet />
     </div>
   </div>
-  <Footer />
+  <FooterNew />
 </template>
 
 <style>

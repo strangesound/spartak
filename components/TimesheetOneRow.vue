@@ -8,7 +8,6 @@ interface RawProps {
     description: string;
     slot_end_time: string;
     slot_start_time: string;
-
 }
 
 const props = defineProps<RawProps>();
@@ -118,7 +117,7 @@ const props = defineProps<RawProps>();
 
 .timesheet__timetable-grid {
     display: grid;
-    grid-template-columns: 1.8fr 5fr 2fr;
+    grid-template-columns: 2.5fr 12fr 4fr;
     grid-gap: 1.190vw;
 }
 
@@ -209,6 +208,7 @@ const props = defineProps<RawProps>();
     border: 1.4px solid var(--colorOrange);
     border-radius: 12px;
     padding: 0.595vw;
+    transition: .25s;
 
 }
 
