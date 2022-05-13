@@ -15,7 +15,7 @@ export default {
 
 <template>
 
-    <FormTest v-show="showModal" @close-modal="showModal = false"/>
+    <FormTest v-show="showModal" @close-modal="showModal = false" />
 
     <div class="banner1922">
         <div class="banner1922__left">
@@ -105,7 +105,8 @@ export default {
 }
 
 .banner1922__right {
-    background-image: url(~/assets/images/1922pattern.svg);
+    position: relative;
+    background-image: url(~/assets/images/1922_pattern.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -113,35 +114,60 @@ export default {
 
 }
 
+.banner1922__right::after {
+    content: "";
+    display: block;
+    position: relative;
+    background-image: url(~/assets/images/1922_ball.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover; */
+    height: 100%;
+    width: 100%;
+    animation: rotating 5s linear infinite;
+
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media (max-width: 575.98px) {
 
-.banner1922{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-}
+    .banner1922 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
-.banner1922__main-text, .banner1922__text{
-    font-size: 5.58vw;
-}
+    .banner1922__main-text,
+    .banner1922__text {
+        font-size: 5.58vw;
+    }
 
-.banner1922__main-text{
-    margin-bottom: 8px;
-}
-.banner1922__year{
-    font-size: 18vw;
-}
+    .banner1922__main-text {
+        margin-bottom: 8px;
+    }
 
-.banner1922__left{
-    padding: 8px;
+    .banner1922__year {
+        font-size: 18vw;
+    }
+
+    .banner1922__left {
+        padding: 8px;
+    }
+
+    .banner1922__right {
+        grid-row-start: 1;
+
+    }
+
 }
-
-.banner1922__right{
-      grid-row-start: 1;
-
-}
-
-}
-
 </style>
 
 
