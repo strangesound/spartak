@@ -16,7 +16,7 @@
 .footer {
     padding: 2.208vw 1.595vw;
     background-color: var(--colorDark);
-    border-radius: 24px;
+    border-radius: 24px 24px 0 0;
 }
 
 .footer__creators,

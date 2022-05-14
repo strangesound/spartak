@@ -38,10 +38,10 @@ export default {
 </template>
 
 <style scoped>
-
-.btn{
+.btn {
     min-height: 3.571vw;
 }
+
 .banner1922 {
     background-color: var(--colorRed);
     display: grid;
@@ -142,12 +142,13 @@ export default {
 }
 
 @keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -177,7 +178,16 @@ export default {
 
     .banner1922__right {
         grid-row-start: 1;
-
+        /* height: 100px; */
+    }
+    .rotateBall{
+        height: 120%;
+        padding: 0;
+        margin: -5%;
+    }
+    .btn{
+        padding-top: 4vw;
+        padding-bottom: 4vw;
     }
 
 }

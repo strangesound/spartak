@@ -39,16 +39,16 @@ const props = defineProps<RawProps>();
     <!-- <nuxt-link :to="{ path: '/', hash: props.day }" class="button--grey"> -->
     <!-- <nuxt-link :to="`/#${props.day}`" class="button--grey"> -->
     <!-- <nuxt-link :to="{path: '/', params: { id:props.day } }"> -->
-        <!-- <button @click="$router.push({ name: '/', hash: '#12' })"> -->
+    <!-- <button @click="$router.push({ name: '/', hash: '#12' })"> -->
 
-            <a class="daylink" :href="`#${props.day}`">
-            <div class="sidetimesheet__one-row">
-                <div class="sidetimesheet__play"></div>
-                <p class="sidetimesheet__day">{{ props.day }}</p>
-                <div class="sidetimesheet__reg-status">открыта регистрация</div>
-            </div>
+    <a class="daylink" :href="`#${props.day}`">
+        <div class="sidetimesheet__one-row">
+            <div class="sidetimesheet__play"></div>
+            <p class="sidetimesheet__day">{{ props.day }}</p>
+            <div class="sidetimesheet__reg-status">открыта регистрация</div>
+        </div>
         <!-- </button> -->
-        </a>
+    </a>
     <!-- </nuxt-link> -->
     <!-- 
     <div class="sidetimesheet__one-row">
@@ -177,5 +177,65 @@ a {
     /* grid-column-end: span col4-start; */
     margin: auto;
     text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .sidetimesheet {
+        width: 75%;
+        padding: 8px;
+    }
+
+
+    .sidetimesheet__cal,
+    .sidetimesheet__reg-status {
+        font-size: 3vw;
+    }
+
+    .sidetimesheet__top-row {
+        padding: 8px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sidetimesheet__day{
+        font-size: 10vh;
+    }
+
+    .btn {
+        margin-top: 8px;
+    }
+
+    .vline-container {
+        width: calc(100%-16px);
+    }
+
+    .sidetimesheet__one-row {
+
+        /* margin-top: 4px; */
+        /* margin-bottom: 4px; */
+
+    }
+
+    .sidetimesheet__one-row:hover::before {
+        margin-left: -16px;
+        transform: translateY(3.2vw);
+    }
+
+    .sidetimesheet__one-row::after {
+        transform: translateY(-.7vw);
+    }
+
+    .active {
+        width: 100%;
+        margin: 0.35vw 0;
+        border-radius: 12px;
+        /* transform: translateX(-10); */
+    }
+
+    .sidetimesheet__day {
+        /* margin: 8px; */
+        transform: translateY(.7vh);
+    }
+
 }
 </style>

@@ -297,6 +297,19 @@ const needDay = data.filter(d => d.day === props.day);
 }
 
 @media (max-width: 575.98px) {
+    .black-window{
+        padding-bottom: 48px;
+        margin-bottom: 16px;
+    }
+
+    .timesheet__day-container {
+        flex-direction: column;
+    }
+
+    .timesheet__month {
+        font-size: 4.167vw;
+        width: min-content;
+    }
 
     .timesheet__timetable-grid-time,
     .timesheet__timetable-grid-description-head {
@@ -305,15 +318,31 @@ const needDay = data.filter(d => d.day === props.day);
         min-width: 25vw;
 
     }
+    .main-day-description{
+        font-size: 5.556vw;
+    }
+
+    .day_and_description{
+        grid-template-columns: 1fr 3fr;
+        gap: 4.444vw;
+    }
 
     .timesheet__timetable-grid-time {
         padding-right: 16px;
     }
 
     .timesheet__slot {
-        font-size: 3.348vw;
-        padding: 1.785vw;
-        margin-top: 32px;
+        font-size: 4.444vw;
+        padding: 4.444vw 1.785vw ;
+        margin-top: 20px;
+    }
+
+    .container{
+        grid-column-start: 1;
+    }
+
+    .slot-selection-text{
+        grid-column-start: 1;
     }
 
     /* 
@@ -331,24 +360,23 @@ const needDay = data.filter(d => d.day === props.day);
 
     .timesheet__timetable-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         padding-top: 32px;
     }
 
     .timesheet__day-number {
         font-size: 18vw;
         padding-right: 8px;
+        text-align: start;
 
     }
 
     .slot-selection-text,
     .timesheet__timetable-grid-description-text {
-        font-size: 3.348vw;
+        font-size: 4.444vw;
     }
 
 
 
-    .slot-selection-text {
-        display: none;
-    }
 }
 </style>
