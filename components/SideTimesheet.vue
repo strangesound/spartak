@@ -51,7 +51,7 @@ import days from "@/day_description.json";
 
 
     </section>
-    <div class="sidetimesheet__overlay" v-show="options.showBurger"> </div>
+    <div class="sidetimesheet__overlay" v-show="options.showBurger" @click="options.showBurger = !options.showBurger"> </div>
 
 </template>
 
@@ -169,7 +169,7 @@ import days from "@/day_description.json";
         top: 0;
         background-color: rgba(0, 0, 0, .5);
         /* border: 3px solid #f1f1f1; */
-        z-index: -10;
+        z-index: 1;
         transition: .5s;
     }
 
