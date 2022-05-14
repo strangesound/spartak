@@ -1,39 +1,24 @@
 
-<script>
+<script setup lang="ts">
+import days from "@/day_description.json";
 
 
-export default {
-    data() {
-        return {
+let data = {
             showModal: false,
-        }
-    },
-    data() {
-        return {
             showBurger: true
 
-        }
-    },
-    // computed: {
-    //     css() {
-    //         if (process.client) {
-    //             let width = window.innerWidth
-    //             return showBurger = width > 768 ? true : false;
-    //         }
-    //     }
-    // }
-
 }
+
 </script>
 
-
+ <!-- v-show="true" @close-modal="showBurger = false" -->
 
 <template>
 
-    <FormTest v-show="showModal" @close-modal="showModal = false" />
+    <FormTest v-show="data.showModal" @close-modal="data.showModal = !data.showModal" />
 
     <label for="check">
-        <input type="checkbox" id="check" @click="showBurger = !showBurger" />
+        <input type="checkbox" id="check" @click="data.showBurger = true" />
         <span></span>
         <span></span>
         <span></span>
@@ -41,86 +26,36 @@ export default {
 
 
 
-    <section class="sidetimesheet" v-show="showBurger" @close-modal="showBurger = false">
+    <section class="sidetimesheet" v-show="data.showBurger" @close-modal="data.showBurger = false">
 
         <div class="sidetimesheet__top-row">
             <p class="sidetimesheet__cal">Календарь событий</p>
             <p class="sidetimesheet__month">Июнь</p>
         </div>
 
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__stop"></div>
-            <p class="sidetimesheet__day sidetimesheet__day-disable">05</p>
-            <div class="sidetimesheet__reg-status">завершено</div>
-        </div>
+    <SideTimeOneRow v-for="myDay in days" :key="myDay.day" :day="myDay.day" />
 
 
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">06</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
 
+        <button class="btn" @click="data.showModal = true">Матч 1922</button>
+        <button class="btn" @click="data.showModal = true">Регистрация СМИ</button>
 
-        <div class="sidetimesheet__one-row active">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">07</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
-
-
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">08</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
-
-
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">09</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
-
-
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">10</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
-
-
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">11</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
-
-        <div class="sidetimesheet__one-row">
-            <div class="sidetimesheet__play"></div>
-            <p class="sidetimesheet__day">12</p>
-            <div class="sidetimesheet__reg-status">открыта регистрация</div>
-        </div>
-
-        <button class="btn" @click="showModal = true">Матч 1922</button>
-        <button class="btn" @click="showModal = true">Регистрация СМИ</button>
-
-        <div class="vline-container">
+        <!-- <div class="vline-container">
             <div class="vline"></div>
             <div class="vline"></div>
             <div class="vline"></div>
             <div class="vline"></div>
             <div class="vline"></div>
-        </div>
+        </div> -->
 
 
 
     </section>
-    <div class="sidetimesheet__overlay" v-show="showBurger" @close-modal="showBurger = false"> </div>
+    <div class="sidetimesheet__overlay"> </div>
 
 </template>
 
-<style>
+<style scoped>
 .sidetimesheet {
     display: flex;
     flex-direction: column;
@@ -287,104 +222,7 @@ label {
 }
 
 
-.sidetimesheet__one-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    min-height: 5.208vw;
-    /* border-top: 1px solid var(--colorDark); */
-    transition: hover 1s;
-    cursor: pointer;
-    z-index: 2;
-}
 
-/* .sidetimesheet__one-row-hover{
-    display: block;
-   background-color: orange;
-   opacity: 0; 
-} */
-.sidetimesheet__one-row:hover::before {
-    content: "";
-    position: absolute;
-    width: 105%;
-    margin-left: -1.190vw;
-    height: 2px;
-    background-color: var(--colorLight);
-    transform: translateY(1.2vw);
-}
-
-.sidetimesheet__one-row::after {
-    content: "";
-    position: absolute;
-    width: 95%;
-    margin-left: 0;
-    height: 1px;
-    background-color: var(--colorDark);
-    transform: translateY(-.2vw);
-}
-
-.active {
-    background-color: var(--colorDark);
-    /* color: var(--colorLight); */
-    width: 100%;
-    margin: 0.35vw 0;
-    border-radius: 0.893vw;
-    /* transform: translateX(-10); */
-}
-
-.active p {
-    color: var(--colorLight);
-}
-
-.active div {
-    filter: invert(100%)
-}
-
-
-.sidetimesheet__play {
-    background-image: url(~/assets/images/play.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.sidetimesheet__stop {
-    background-image: url(~/assets/images/stop.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-.sidetimesheet__day {
-    grid-column-start: 3;
-    margin: auto;
-    font-family: 'Druk';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 5.952vw;
-    line-height: 85%;
-    text-align: center;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    color: var(--colorDark);
-
-    transform: translateY(0.35vw)
-}
-
-.sidetimesheet__day-disable {
-    -webkit-text-stroke: 1px var(--colorDark);
-    text-stroke: 1px var(--colorDark);
-    color: var(--colorOrange);
-
-    transform: translateY(0.35vw)
-}
-
-.sidetimesheet__reg-status {
-    grid-column: span 2;
-    font-size: 1.116vw;
-    /* grid-column-end: span col4-start; */
-    margin: auto;
-    text-align: center;
-}
 
 .vline-container {
     position: absolute;

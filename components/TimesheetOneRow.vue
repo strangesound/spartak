@@ -28,7 +28,7 @@ const needDay = data.filter(d => d.day === props.day);
 
 
 <template>
-    <div class="black-window">
+    <div class="black-window" :id="day">
         <div class="day_and_description">
             <div class="timesheet__day-container">
                 <p class="timesheet__day-number">{{ day }}</p>
@@ -234,6 +234,7 @@ const needDay = data.filter(d => d.day === props.day);
     letter-spacing: -0.01em;
     color: var(--colorLight);
     white-space: pre-line;
+    margin-bottom: 8px;
 
     /* white-space: nowrap; */
 }
@@ -248,8 +249,6 @@ const needDay = data.filter(d => d.day === props.day);
     letter-spacing: -0.01em;
     color: #929292;
     white-space: pre-line;
-    margin-top: 8px;
-
 }
 
 .timesheet__slot {
