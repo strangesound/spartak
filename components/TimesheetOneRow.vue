@@ -12,6 +12,15 @@ import data from "@/data.json";
 //     slot_start_time: string;
 // }
 
+// const elTop = useState('elTop', () => {
+//     const bodyRect = document.body.getBoundingClientRect()
+//     const currentEl = document.getElementById("05")
+//     const elemRect = currentEl.getBoundingClientRect()
+//     const offset = elemRect.top - bodyRect.top;
+
+// })
+// console.log(elTop)
+
 interface RawProps {
     day: string;
     first_words_selection: string;
@@ -49,7 +58,7 @@ const needDay = data.filter(d => d.day === props.day);
 
         <div class="timesheet__timetable-grid">
 
-            <p class="slot-selection-text"> Выбор слота </p>
+            <p class="slot-selection-text"> Выбери слот<br>для регистрации </p>
         </div>
 
 
@@ -276,6 +285,7 @@ const needDay = data.filter(d => d.day === props.day);
     border-radius: 12px;
     padding: 0.595vw;
     transition: .25s;
+    white-space: pre;
 
 }
 
@@ -297,7 +307,7 @@ const needDay = data.filter(d => d.day === props.day);
 }
 
 @media (max-width: 575.98px) {
-    .black-window{
+    .black-window {
         padding-bottom: 48px;
         margin-bottom: 16px;
     }
@@ -311,18 +321,24 @@ const needDay = data.filter(d => d.day === props.day);
         width: min-content;
     }
 
+    .timesheet__timetable-grid-description {
+        grid-template-columns: 1fr;
+    }
+
     .timesheet__timetable-grid-time,
     .timesheet__timetable-grid-description-head {
         font-size: 5.58vw;
         white-space: normal;
         min-width: 25vw;
+        padding-bottom: 12px;
 
     }
-    .main-day-description{
+
+    .main-day-description {
         font-size: 5.556vw;
     }
 
-    .day_and_description{
+    .day_and_description {
         grid-template-columns: 1fr 3fr;
         gap: 4.444vw;
     }
@@ -333,15 +349,15 @@ const needDay = data.filter(d => d.day === props.day);
 
     .timesheet__slot {
         font-size: 4.444vw;
-        padding: 4.444vw 1.785vw ;
+        padding: 4.444vw 1.785vw;
         margin-top: 20px;
     }
 
-    .container{
+    .container {
         grid-column-start: 1;
     }
 
-    .slot-selection-text{
+    .slot-selection-text {
         grid-column-start: 1;
     }
 

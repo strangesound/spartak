@@ -1,33 +1,23 @@
 
 <script setup lang="ts">
 import days from "@/day_description.json";
-// import FormTest from "./FormTest.vue";
 
-    const options = reactive({
-        showModal: false,
-        showBurger: true
-        }
-    )
-    // const showModal = false;
-// console.log(showModal)
+const options = reactive({
+    showModal: false,
+    showBurger: true
+}
+)
 </script>
 
- <!-- v-show="true" @close-modal="showBurger = false" -->
 
 <template>
 
     <FormTest v-show="options.showModal" @close-modal="options.showModal = !options.showModal" />
 
-    <!-- <label for="check">
-        <input type="checkbox" id="check" @click="data.showBurger = true" />
-        <span></span>
-        <span></span>
-        <span></span>
-    </label> -->
 
     <button class="burger-btn" @click="options.showBurger = !options.showBurger"></button>
 
-    <section class="sidetimesheet" v-show="options.showBurger" >
+    <section class="sidetimesheet" v-show="options.showBurger">
 
         <div class="sidetimesheet__top-row">
             <p class="sidetimesheet__cal">Календарь событий</p>
@@ -51,7 +41,8 @@ import days from "@/day_description.json";
 
 
     </section>
-    <div class="sidetimesheet__overlay" v-show="options.showBurger" @click="options.showBurger = !options.showBurger"> </div>
+    <div class="sidetimesheet__overlay" v-show="options.showBurger" @click="options.showBurger = !options.showBurger">
+    </div>
 
 </template>
 
@@ -229,9 +220,10 @@ import days from "@/day_description.json";
     }
 
 
-    .sidetimesheet__cal{
+    .sidetimesheet__cal {
         font-size: 3vw;
     }
+
     .sidetimesheet__top-row {
         padding: 8px;
         display: grid;
