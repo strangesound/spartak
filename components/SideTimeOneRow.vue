@@ -1,4 +1,10 @@
 <script setup lang="ts">
+// import Vue from 'vue';
+// import vueSmoothScroll from 'vue2-smooth-scroll';
+
+// nuxt3.use(vueSmoothScroll);
+
+
 
 // import data from "@/data.json";
 
@@ -28,14 +34,23 @@ const props = defineProps<RawProps>();
 
 
 <template>
-<a class="daylink" :href="`#${props.day}`">
-    <div class="sidetimesheet__one-row">
-        <div class="sidetimesheet__play"></div>
-        <p class="sidetimesheet__day">{{props.day}}</p>
-        <div class="sidetimesheet__reg-status">открыта регистрация</div>
-    </div>
-</a>
-<!-- 
+
+    <!-- <nuxt-link :to="hash:props.day"> { path: '/', hash: props.day }-->
+    <!-- <nuxt-link :to="{ path: '/', hash: props.day }" class="button--grey"> -->
+    <!-- <nuxt-link :to="`/#${props.day}`" class="button--grey"> -->
+    <!-- <nuxt-link :to="{path: '/', params: { id:props.day } }"> -->
+        <!-- <button @click="$router.push({ name: '/', hash: '#12' })"> -->
+
+            <a class="daylink" :href="`#${props.day}`">
+            <div class="sidetimesheet__one-row">
+                <div class="sidetimesheet__play"></div>
+                <p class="sidetimesheet__day">{{ props.day }}</p>
+                <div class="sidetimesheet__reg-status">открыта регистрация</div>
+            </div>
+        <!-- </button> -->
+        </a>
+    <!-- </nuxt-link> -->
+    <!-- 
     <div class="sidetimesheet__one-row">
         <div class="sidetimesheet__play"></div>
         <p class="sidetimesheet__day">06</p>
@@ -54,9 +69,11 @@ const props = defineProps<RawProps>();
 a {
     color: inherit;
     text-decoration: none;
+    scroll-behavior: smooth;
+
 }
 
-.daylink{
+.daylink {
     scroll-behavior: smooth;
     text-decoration: none;
 }
@@ -65,7 +82,7 @@ a {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
-    min-height: 5.208vw;
+    /* min-height: 5.208vw; */
     /* border-top: 1px solid var(--colorDark); */
     transition: hover 1s;
     cursor: pointer;
@@ -131,10 +148,11 @@ a {
 .sidetimesheet__day {
     grid-column-start: 3;
     margin: auto;
+    margin-bottom: .5vh;
     font-family: 'Druk';
     font-style: italic;
     font-weight: 400;
-    font-size: 5.952vw;
+    font-size: 10vh;
     line-height: 85%;
     text-align: center;
     letter-spacing: 0.01em;

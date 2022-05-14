@@ -37,7 +37,7 @@ let data = {
 
 
 
-        <button class="btn" @click="data.showModal = true">Матч 1922</button>
+        <button class="btn mtop" @click="data.showModal = true">Матч 1922</button>
         <button class="btn" @click="data.showModal = true">Регистрация СМИ</button>
 
         <!-- <div class="vline-container">
@@ -56,6 +56,9 @@ let data = {
 </template>
 
 <style scoped>
+.mtop{
+    margin-top: auto;
+}
 .sidetimesheet {
     display: flex;
     flex-direction: column;

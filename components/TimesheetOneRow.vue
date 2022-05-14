@@ -24,11 +24,20 @@ const needDay = data.filter(d => d.day === props.day);
 // window.console.log (needDay);
 
 
+// const element = $refs."day" 
+// var bodyRect = document.body.getBoundingClientRect(),
+//     elemRect = element.getBoundingClientRect(),
+//     offset   = elemRect.top - bodyRect.top;
+
+// alert('Element is ' + offset + ' vertical pixels from <body>');
+
+
+
 </script>
 
 
 <template>
-    <div class="black-window" :id="day">
+    <div class="black-window" :id="day" ref="day">
         <div class="day_and_description">
             <div class="timesheet__day-container">
                 <p class="timesheet__day-number">{{ day }}</p>

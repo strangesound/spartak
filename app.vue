@@ -1,5 +1,7 @@
 <template>
   <!-- <FirstAnimation /> -->
+          <!-- <nuxt-link :to="{path: '/', hash: '#12'}" class="btn">Anchor1</nuxt-link> -->
+
 
   <div class="container1344">
     <div class="grid-container">
@@ -7,11 +9,12 @@
         <TheHeader />
         <Banner1922 />
         <Timesheet />
+        <FooterNew />
+
       </div>
       <SideTimesheet />
     </div>
   </div>
-  <FooterNew />
 </template>
 
 <style>
@@ -21,12 +24,12 @@
   grid-template-columns: minmax(0, 3fr) 1fr
 }
 
-@media (max-width: 991.98px) { 
+@media (max-width: 991.98px) {
   .grid-container {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
- }
+  }
 }
 
 

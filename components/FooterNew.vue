@@ -1,16 +1,22 @@
 <template>
-
-    <div class="footer">
-        <p class="footer__creators">Сайт сделан в студии <a href="https://www.petrovichbrothers.com/"
-                target="_blank">Petrovich Brothers</a></p>
+    <div class="gray">
+        <div class="footer">
+            <p class="footer__creators">Сайт сделан в студии <a href="https://www.petrovichbrothers.com/"
+                    target="_blank">Petrovich Brothers</a></p>
+        </div>
     </div>
-
 </template>
 
-<style>
+<style scoped>
+.gray{
+    background-color: #292929;
+        padding: 0 .595vw;
+
+}
 .footer {
-    padding: 5.208vw 0.595vw;
+    padding: 2.208vw 1.595vw;
     background-color: var(--colorDark);
+    border-radius: 24px;
 }
 
 .footer__creators,
