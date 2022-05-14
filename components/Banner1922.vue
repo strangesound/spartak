@@ -30,12 +30,18 @@ export default {
             <button class="btn" @click="showModal = true">Записаться на матч</button>
 
         </div>
-        <div class="banner1922__right"></div>
+        <div class="banner1922__right">
+            <div class="rotateBall"></div>
+        </div>
     </div>
 
 </template>
 
-<style>
+<style scoped>
+
+.btn{
+    min-height: 3.571vw;
+}
 .banner1922 {
     background-color: var(--colorRed);
     display: grid;
@@ -89,8 +95,8 @@ export default {
     line-height: 96%;
     letter-spacing: -0.01em;
     /* text-transform: uppercase; */
-    color: var(--colorLight);
-    opacity: .5;
+    color: var(--colorDark);
+    /* opacity: .5; */
 
 }
 
@@ -98,7 +104,7 @@ export default {
     background-image: url(~/assets/images/arr.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     height: 16px;
 
@@ -106,25 +112,32 @@ export default {
 
 .banner1922__right {
     position: relative;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
     background-image: url(~/assets/images/1922_pattern.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 
 
 }
 
-.banner1922__right::after {
-    content: "";
-    display: block;
-    position: relative;
+.rotateBall {
+    /* content: ""; */
+    /* display: block; */
+    /* position: relative; */
     background-image: url(~/assets/images/1922_ball.svg);
     background-repeat: no-repeat;
     background-position: center;
-    /* background-size: cover; */
-    height: 100%;
-    width: 100%;
+    background-size: contain;
+    height: 80%;
+    margin-top: 5%;
+    /* width: 100%; */
+    /* padding-bottom: 100%; */
     animation: rotating 5s linear infinite;
+    /* vertical-align: middle; */
 
 }
 

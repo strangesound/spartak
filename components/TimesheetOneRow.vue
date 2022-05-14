@@ -1,52 +1,72 @@
 <script setup lang="ts">
 
+import data from "@/data.json";
+
+// interface RawProps {
+//     day: string;
+//     eventStartTime: string;
+//     eventEndTime: string;
+//     name: string;
+//     description: string;
+//     slot_end_time: string;
+//     slot_start_time: string;
+// }
+
 interface RawProps {
     day: string;
-    eventStartTime: string;
-    eventEndTime: string;
-    name: string;
-    description: string;
-    slot_end_time: string;
-    slot_start_time: string;
+    first_words_selection: string;
+    day_description: string;
 }
 
+
 const props = defineProps<RawProps>();
+const needDay = data.filter(d => d.day === props.day);
+// window.console.log (needDay);
 
 
 </script>
 
 
 <template>
-    <div class="timesheet__timetable-grid">
-        <p class="main-day-description">В этот день Winliner уплывает в самое начало пути ФК "Спартак" – в 20-30-е года,
-            когда произошло становление клуба! Вместе с вами мы представим как формировался легендарный футбольный
-            клуб, воссоздадим уникальную ретро форму и проведем турнир "Московского клуба спорта".</p>
-        <p class="slot-selection-text">Выбор слота</p>
-    </div>
-    <div class="timesheet__timetable-grid">
-        <div class="timesheet__day">
-            <div class="timesheet__day-sheet-container">
-                <div class="timesheet__day-container">
-                    <p class="timesheet__day-number">{{ day }}</p>
-                    <p class="timesheet__month">июня</p>
-                </div>
-
+    <div class="black-window">
+        <div class="day_and_description">
+            <div class="timesheet__day-container">
+                <p class="timesheet__day-number">{{ day }}</p>
+                <p class="timesheet__month">июня</p>
             </div>
+
+            <p class="main-day-description"><span>{{ first_words_selection }}</span> {{ day_description }}</p>
         </div>
 
-        <div class="container">
-            <div class="thin-line"></div>
-            <div class="timesheet__timetable-grid-description">
-                <div class="timesheet__timetable-grid-time">{{ eventStartTime + "—" + eventEndTime }}</div>
-                <div>
-                    <h3 class="timesheet__timetable-grid-description-head">{{ name }}</h3>
-                    <p class="timesheet__timetable-grid-description-text">{{ description }}</p>
+        <div class="timesheet__timetable-grid">
+
+            <p class="slot-selection-text"> Выбор слота </p>
+        </div>
+
+
+        <div class="ober" v-for="event in needDay" :key="event.name" :day="event.day"
+            :eventStartTime="event.eventStartTime" :eventEndTime="event.eventEndTime" :name="event.name"
+            :description="event.description" :slot_start_time="event.slot_start_time"
+            :slot_end_time="event.slot_end_time">
+            <div class="timesheet__timetable-grid">
+
+                <div class="container">
+                    <div class="thin-line"></div>
+                    <div class="timesheet__timetable-grid-description">
+                        <div class="timesheet__timetable-grid-time">{{ event.eventStartTime + "—" + event.eventEndTime
+                        }}
+                        </div>
+                        <div>
+                            <h3 class="timesheet__timetable-grid-description-head">{{ event.name }}</h3>
+                            <p class="timesheet__timetable-grid-description-text">{{ event.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timesheet__slot">
+                    <p>{{ event.slot_start_time + "—" + event.slot_end_time }}</p>
+                    <div class="timesheet__slot-arrow"></div>
                 </div>
             </div>
-        </div>
-        <div class="timesheet__slot">
-            <p>{{ slot_start_time + "—" + slot_end_time }}</p>
-            <div class="timesheet__slot-arrow"></div>
         </div>
     </div>
 
@@ -56,28 +76,49 @@ const props = defineProps<RawProps>();
 </template>
 
 <style scoped>
+.black-window {
+    background-color: var(--colorDark);
+    padding: 1.190vw;
+    border-radius: 24px;
+    margin-bottom: 1.190vw;
+}
+
+.container {
+    /* display: block; */
+    grid-column-start: 2;
+}
+
 .thin-line {
     width: 100%;
     height: 1px;
     background-color: var(--colorLight);
-    margin-bottom: 8px ;
+    margin-bottom: 8px;
+}
+
+.day_and_description {
+    display: grid;
+    grid-template-columns: 2.5fr 16fr;
+    grid-gap: 1.190vw;
+    margin-top: 1.190vw;
+
 }
 
 .main-day-description {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    align-self: end;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 3; */
+    /* align-self: end; */
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.2vw;
+    font-size: 1.860vw;
     line-height: 96%;
     letter-spacing: -0.01em;
     color: var(--colorLight);
-    padding-top: 5vw;
-    padding-bottom: 2vw;
-    opacity: .5;
     white-space: pre-line;
+}
+
+.main-day-description span {
+    color: var(--colorOrange);
 }
 
 .timesheet__day-container {
@@ -119,15 +160,13 @@ const props = defineProps<RawProps>();
     display: grid;
     grid-template-columns: 2.5fr 12fr 4fr;
     grid-gap: 1.190vw;
+    margin-bottom: 0.818vw;
 }
 
 
 .slot-selection-text {
-    margin-top: 5.208vw;
-
-    /* display: flex;
-    flex-direction: row; */
-
+    margin-top: 1.190vw;
+    margin-bottom: 1.190vw;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
@@ -137,10 +176,30 @@ const props = defineProps<RawProps>();
     color: var(--colorOrange);
     width: 100%;
     text-align: center;
-    margin-bottom: 1.190vw;
     grid-column-start: 3;
     align-self: end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+}
 
+.slot-selection-text::before {
+    /* display: inline-block; */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorOrange);
+    margin-right: 8px;
+}
+
+.slot-selection-text::after {
+    /* display: inline-block; */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorOrange);
+    margin-left: 8px;
 
 }
 
@@ -212,7 +271,7 @@ const props = defineProps<RawProps>();
 
 }
 
-.timesheet__slot:hover{
+.timesheet__slot:hover {
     background-color: var(--colorOrange);
     color: var(--colorDark);
     cursor: pointer;
@@ -225,7 +284,7 @@ const props = defineProps<RawProps>();
     height: 1.190vw;
 }
 
-.timesheet__slot:hover > .timesheet__slot-arrow{
+.timesheet__slot:hover>.timesheet__slot-arrow {
     filter: brightness(0);
 }
 

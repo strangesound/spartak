@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import data from "@/data.json";
+import data from "@/day_description.json";
 
 </script>
 
@@ -11,10 +11,7 @@ import data from "@/data.json";
                 с&nbsp;несколькими активностями. В&nbsp;течении временного слота вы&nbsp;не&nbsp;можете покинуть лодку
                 и&nbsp;нельзя опаздывать&nbsp;&mdash; лодка отплывает по&nbsp;расписанию.</p>
         </div>
-        <TimesheetOneRow v-for="event in data" :key="event.name" :day="event.day"
-            :eventStartTime="event.eventStartTime" :eventEndTime="event.eventEndTime" :name="event.name" :description="event.description"
-            :slot_start_time="event.slot_start_time"
-            :slot_end_time="event.slot_end_time" />
+        <TimesheetOneRow v-for="myDay in data" :key="myDay.day" :day="myDay.day" :first_words_selection="myDay.first_words_selection" :day_description="myDay.day_description" />
     </section>
 </template>
 
@@ -23,12 +20,13 @@ import data from "@/data.json";
 
 .timesheet {
     background-color: #292929;
-    padding: 5.357vw 0.595vw;
+    padding: 2.381vw 0.595vw;
 }
 
 .timesheet__first-block {
     display: grid;
     grid-template-columns: 4fr 5fr;
+    margin-bottom: 7.440vw;
 
 }
 
