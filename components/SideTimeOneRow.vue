@@ -27,7 +27,8 @@ interface RawProps {
 
 const props = defineProps<RawProps>();
 // const needDay = data.filter(d => d.day === props.day);
-// window.console.log (needDay);
+// console.log (props.day);
+
 
 
 </script>
@@ -35,21 +36,26 @@ const props = defineProps<RawProps>();
 
 <template>
 
-    <!-- <nuxt-link :to="hash:props.day"> { path: '/', hash: props.day }-->
+
+    <!-- <nuxt-link to="{ path: '/', hash: props.day }" ; -->
     <!-- <nuxt-link :to="{ path: '/', hash: props.day }" class="button--grey"> -->
     <!-- <nuxt-link :to="`/#${props.day}`" class="button--grey"> -->
     <!-- <nuxt-link :to="{path: '/', params: { id:props.day } }"> -->
     <!-- <button @click="$router.push({ name: '/', hash: '#12' })"> -->
+<!-- <nuxt-link :to="{ path: '/',hash:`#${props.day}`}"> -->
+<!-- <nuxt-link to="https://nuxtjs.org"> -->
 
-    <a class="daylink" :href="`#${props.day}`">
+<nuxt-link :to="({path: '/', hash:`#${props.day}`})" class="daylink">
+
+    <!-- <a class="daylink" :href="`#${props.day}`"> -->
         <div class="sidetimesheet__one-row">
             <div class="sidetimesheet__play"></div>
             <p class="sidetimesheet__day">{{ props.day }}</p>
             <div class="sidetimesheet__reg-status">открыта регистрация</div>
         </div>
         <!-- </button> -->
-    </a>
-    <!-- </nuxt-link> -->
+    <!-- </a> -->
+    </nuxt-link>
     <!-- 
     <div class="sidetimesheet__one-row">
         <div class="sidetimesheet__play"></div>

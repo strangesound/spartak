@@ -2,6 +2,6 @@
 
 design&development [petrovichbrothers.com](www.petrovichbrothers.com)
 
-Art-direction: Artyoum Petrovich, Alexandr Gruzdev
+Art-direction: Artyom Petrovich, Alexandr Gruzdev
 Frontend: Arseny Petrovich
 Backend: Evgeny Zozulya

@@ -2,16 +2,20 @@
 <script setup lang="ts">
 import days from "@/day_description.json";
 
+// const width = computed () => 
 const options = reactive({
     showModal: false,
+    showModalSmi: true,
     showBurger: true
 }
 )
+
 </script>
 
 
 <template>
 
+    <FormSmi v-show="options.showModalSmi" @close-modal="options.showModalSmi = !options.showModalSmi" />
     <FormTest v-show="options.showModal" @close-modal="options.showModal = !options.showModal" />
 
 
@@ -35,7 +39,7 @@ const options = reactive({
 
         <div class="line"></div>
         <button class="btn mtop" @click="options.showModal = true">Матч 1922</button>
-        <button class="btn" @click="options.showModal = true">Регистрация СМИ</button>
+        <button class="btn" @click="options.showModalSmi = true">Регистрация СМИ</button>
 
 
 

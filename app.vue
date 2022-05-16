@@ -1,5 +1,5 @@
 <template>
-  <!-- <FirstAnimation /> -->
+  <FirstAnimation />
           <!-- <nuxt-link :to="{path: '/', hash: '#12'}" class="btn">Anchor1</nuxt-link> -->
 
 
