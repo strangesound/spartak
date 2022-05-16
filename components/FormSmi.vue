@@ -275,7 +275,9 @@ select {
   }
 
   .form-container input[type=text],
-  .form-container input[type=tel] {
+  .form-container input[type=tel],
+    .form-container input[type=url],
+    select {
     font-size: 5.58vw;
   }
 
